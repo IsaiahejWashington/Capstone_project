@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Movie Rankings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Movie Rankings</h1>
+            <div class="controls">
+                <button id="add-movie">Add Movie</button>
+                <button id="get-recommendation">Get Recommendation</button>
+            </div>
+        </header>
+
+        <div class="movie-lists">
+            <div class="movie-list" id="ranking-list">
+                <h2>My Ranking</h2>
+                <div class="list-container" id="ranking-container"></div>
+            </div>
+        </div>
+
+        <div id="recommendation-container" class="hidden">
+            <h2>Recommendation</h2>
+            <div id="recommendation-card" class="movie-card"></div>
+            <button id="close-recommendation">Close</button>
+        </div>
+    </div>
+
+
+    <div id="movie-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Movie</h2>
+            <form id="movie-form">
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="director">Director:</label>
+                    <input type="text" id="director" required>
+                </div>
+                <div class="form-group">
+                    <label for="year">Year:</label>
+                    <input type="number" id="year" min="1900" max="2025" required>
+                </div>
+                <div class="form-group">
+                    <label for="genre">Genre:</label>
+                    <select id="genre" required>
+                        <option value="action">Action</option>
+                        <option value="comedy">Comedy</option>
+                        <option value="drama">Drama</option>
+                        <option value="sci-fi">Sci-Fi</option>
+                        <option value="horror">Horror</option>
+                        <option value="thriller">Thriller</option>
+                        <option value="romance">Romance</option>
+                        <option value="animation">Animation</option>
+                        <option value="war">War</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country of Origin:</label>
+                    <input type="text" id="country" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
